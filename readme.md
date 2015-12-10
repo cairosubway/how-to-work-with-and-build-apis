@@ -108,8 +108,58 @@ Delete - DELETE
 
 ## Working with APIs
 
+Let's build a weather app CLI that tells us the weather given any zipcode.
+
 ## Build Your Own API
 
 ### Express
 
+[Express.js](http://expressjs.com/en/index.html) is a web framework for node js.
+
+    $ mkdir etsy-clone
+    $ cd etsy-clone
+    $ npm init
+    $ npm install --save express
+
+```js
+// index.js
+
+var express = require("express");
+var app = express();
+app.get("/", function(req, res){
+  res.send("hello world");
+})
+```
+
+Next, let's hardcode some data and respond with json
+
+```js
+// index.js
+
+var products = [
+  "Lip Balm Set organic lip balm stocking stuffers Natural lip balm Pick 3",
+  "Purple and Gray dreamy bird ornament - Beautiful Bird decoration in beige - Upcycled Woodland hanging"
+];
+
+app.get("/products",function(req, res){
+  res.json(products);
+});
+```
+
+And a show route
+
+```js
+// index.js
+
+app.get("/products/:id", function(req, res){
+  var product = products[req.params.id];
+  res.json(product);
+});
+```
+
+>Bonus! Try adding create and delete functionality.
+
 ### MongoDB
+
+A record in MongoDB is a document, which is a data structure composed of field and value pairs. MongoDB documents are similar to JSON objects. The values of fields may include other documents, arrays, and arrays of documents.
+
