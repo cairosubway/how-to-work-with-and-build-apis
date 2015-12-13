@@ -110,7 +110,32 @@ Delete - DELETE
 
 Let's build a weather app CLI that tells us the weather given any zipcode.
 
+[Starter Code](https://github.com/ga-dc/node-cli-weather) | [Solution Code](https://github.com/ga-dc/node-cli-weather/tree/solution)
+
+    $ git clone https://github.com/ga-dc/node-cli-weather
+    $ cd node-cli-weather
+    $ npm init
+    $ git init
+    $ echo "node_modules" >> .gitignore
+
+Visit http://www.wunderground.com/weather/api/d/login.html and create a free account.
+
+Click "Explore My Options"
+
+Click "Purchase Key"
+
+Visit http://www.wunderground.com/weather/api/d/docs and click "Show Response"
+
+```
+// env.js
+module.exports = {
+  wuApiKey: "Your API Key Here"
+}
+```
+
 ## Build Your Own API
+
+[Starter Code](https://github.com/ga-dc/products-api) | [Solution Code](https://github.com/ga-dc/products-api/tree/solution)
 
 ### Express
 
